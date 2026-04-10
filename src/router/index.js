@@ -43,7 +43,7 @@ const routes = [
             { path: 'siswa', name: 'SiswaIndex', component: () => import('../views/dashboard/siswa/IndexView.vue') },
             { path: 'siswa/create', name: 'SiswaCreate', component: () => import('../views/dashboard/siswa/FormView.vue') },
             { path: 'siswa/edit/:id', name: 'SiswaEdit', component: () => import('../views/dashboard/siswa/FormView.vue') },
-            // { path: 'siswa/:id', name: 'SiswaDetail', component: () => import('../views/dashboard/siswa/DetailView.vue') },
+            { path: 'siswa/:id', name: 'SiswaDetail', component: () => import('../views/dashboard/siswa/DetailView.vue') },
         ]
     }
 ];

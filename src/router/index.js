@@ -4,6 +4,7 @@ import { useAuthStore } from '../stores/auth';
 import AuthLayout from '../layouts/AuthLayout.vue';
 import DashboardLayout from '../layouts/DashboardLayout.vue';
 
+
 const routes = [
     {
         path: '/',
@@ -24,7 +25,10 @@ const routes = [
         // Halaman yang WAJIB login
         meta: { requiresAuth: true },
         children: [
-            { path: '', name: 'Dashboard', component: () => import('../views/dashboard/IndexView.vue') }
+            { path: '', name: 'Dashboard', component: () => import('../views/dashboard/IndexView.vue') },
+            { path: 'kelas', name: 'KelasIndex', component: () => import('../views/dashboard/kelas/IndexView.vue') },
+            { path: 'kelas/create', name: 'KelasCreate', component: () => import('../views/dashboard/kelas/FormView.vue') },
+            { path: 'kelas/edit/:id', name: 'KelasEdit', component: () => import('../views/dashboard/kelas/FormView.vue') }
         ]
     }
 ];

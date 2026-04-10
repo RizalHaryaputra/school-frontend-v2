@@ -18,13 +18,13 @@
                     </svg>
                 </div>
 
-                <button
+                <router-link to="/dashboard/kelas/create"
                     class="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl shadow-md shadow-emerald-200 transition-all active:scale-95">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
                     Tambah
-                </button>
+                </router-link>
             </div>
         </div>
 
@@ -71,7 +71,7 @@
                                     <p class="text-lg font-bold text-emerald-900 mb-1">Tidak ada data kelas</p>
                                     <p class="text-sm text-emerald-600 max-w-sm">
                                         {{ searchQuery ? `Tidak menemukan kelas dengan kata kunci "${searchQuery}"` :
-                                        'Belum ada data kelas yang ditambahkan ke dalam sistem.' }}
+                                            'Belum ada data kelas yang ditambahkan ke dalam sistem.' }}
                                     </p>
                                 </div>
                             </td>
@@ -81,7 +81,7 @@
                             class="hover:bg-emerald-50/30 transition-colors">
                             <td class="p-4"><span
                                     class="font-mono text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">{{
-                                    item.kode_kelas }}</span></td>
+                                        item.kode_kelas }}</span></td>
                             <td class="p-4 font-medium text-emerald-900">{{ item.nama_kelas }}</td>
                             <td class="p-4">
                                 <div class="flex justify-center gap-2">
@@ -133,6 +133,7 @@
 <script setup>
 // Bagian script tetap sama persis seperti kode Anda sebelumnya
 import { ref, reactive, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import api from '../../../utils/axios';
 import BaseModal from '../../../components/BaseModal.vue';
 
@@ -141,6 +142,7 @@ const meta = ref(null);
 const isLoading = ref(true);
 const searchQuery = ref('');
 const modal = reactive({ show: false, data: null });
+const router = useRouter();
 
 const fetchData = async (url = '/kelas') => {
     isLoading.value = true;
@@ -189,6 +191,10 @@ const handleDelete = async () => {
             alert('Gagal menghapus data');
         }
     }
+};
+
+const handleEdit = (item) => {
+    router.push(`/dashboard/kelas/edit/${item.id}`);
 };
 
 onMounted(() => fetchData());

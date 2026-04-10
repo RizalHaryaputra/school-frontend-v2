@@ -7,7 +7,6 @@
             </div>
             <nav class="flex-1 p-4 space-y-2">
                 <p class="text-slate-400 text-xs uppercase font-semibold mb-4">Menu Utama</p>
-                <div class="text-sm text-slate-500 italic p-2 bg-slate-700/30 rounded">
                     <router-link to="/dashboard/kelas"
                         class="flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all group"
                         :class="$route.path.includes('kelas') ? 'bg-emerald-700 text-white shadow-lg shadow-emerald-900/50' : 'text-emerald-100/70 hover:bg-emerald-700/50 hover:text-emerald-50'">
@@ -18,7 +17,6 @@
                         </svg>
                         <span>Data Kelas</span>
                     </router-link>
-                </div>
             </nav>
         </aside>
 

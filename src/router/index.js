@@ -26,11 +26,9 @@ const routes = [
         meta: { requiresAuth: true },
         children: [
             { path: '', name: 'Dashboard', component: () => import('../views/dashboard/IndexView.vue') },
-            {
-                path: 'kelas',
-                name: 'Kelas',
-                component: () => import('../views/dashboard/kelas/IndexView.vue')
-            }
+            { path: 'kelas', name: 'KelasIndex', component: () => import('../views/dashboard/kelas/IndexView.vue') },
+            { path: 'kelas/create', name: 'KelasCreate', component: () => import('../views/dashboard/kelas/FormView.vue') },
+            { path: 'kelas/edit/:id', name: 'KelasEdit', component: () => import('../views/dashboard/kelas/FormView.vue') }
         ]
     }
 ];

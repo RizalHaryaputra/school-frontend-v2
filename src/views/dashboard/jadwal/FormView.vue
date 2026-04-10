@@ -251,10 +251,6 @@ const handleSubmit = async () => {
     errorMessage.value = null;
 
     try {
-        // Beberapa browser mengirimkan 'HH:mm', API kadang minta 'HH:mm:ss'
-        // Laravel biasanya bisa menerima 'HH:mm' untuk kolom time, 
-        // jika error validasi, kita bisa menambahkan ':00' di belakangnya di sini.
-
         await api({
             method: submitMethod.value,
             url: submitUrl.value,

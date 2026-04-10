@@ -34,7 +34,8 @@ const routes = [
             { path: 'mapel/edit/:id', name: 'MapelEdit', component: () => import('../views/dashboard/mapel/FormView.vue') },
             { path: 'guru', name: 'GuruIndex', component: () => import('../views/dashboard/guru/IndexView.vue') },
             { path: 'guru/create', name: 'GuruCreate', component: () => import('../views/dashboard/guru/FormView.vue') },
-            { path: 'guru/edit/:id', name: 'GuruEdit', component: () => import('../views/dashboard/guru/FormView.vue') }
+            { path: 'guru/edit/:id', name: 'GuruEdit', component: () => import('../views/dashboard/guru/FormView.vue') },
+            { path: 'guru/:id', name: 'GuruDetail', component: () => import('../views/dashboard/guru/DetailView.vue') }
         ]
     }
 ];

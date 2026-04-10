@@ -44,8 +44,8 @@ const routes = [
             { path: 'siswa/edit/:id', name: 'SiswaEdit', component: () => import('../views/dashboard/siswa/FormView.vue') },
             { path: 'siswa/:id', name: 'SiswaDetail', component: () => import('../views/dashboard/siswa/DetailView.vue') },
             { path: 'users', name: 'UsersIndex', component: () => import('../views/dashboard/users/IndexView.vue') },
-            // { path: 'users/create', name: 'UsersCreate', component: () => import('../views/dashboard/users/FormView.vue') },
-            // { path: 'users/edit/:id', name: 'UsersEdit', component: () => import('../views/dashboard/users/FormView.vue') },
+            { path: 'users/create', name: 'UsersCreate', component: () => import('../views/dashboard/users/FormView.vue') },
+            { path: 'users/edit/:id', name: 'UsersEdit', component: () => import('../views/dashboard/users/FormView.vue') },
         ]
     }
 ];

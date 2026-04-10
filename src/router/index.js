@@ -39,11 +39,13 @@ const routes = [
             { path: 'jadwal', name: 'JadwalIndex', component: () => import('../views/dashboard/jadwal/IndexView.vue') },
             { path: 'jadwal/create', name: 'JadwalCreate', component: () => import('../views/dashboard/jadwal/FormView.vue') },
             { path: 'jadwal/edit/:id', name: 'JadwalEdit', component: () => import('../views/dashboard/jadwal/FormView.vue') },
-            // Rute Siswa
             { path: 'siswa', name: 'SiswaIndex', component: () => import('../views/dashboard/siswa/IndexView.vue') },
             { path: 'siswa/create', name: 'SiswaCreate', component: () => import('../views/dashboard/siswa/FormView.vue') },
             { path: 'siswa/edit/:id', name: 'SiswaEdit', component: () => import('../views/dashboard/siswa/FormView.vue') },
             { path: 'siswa/:id', name: 'SiswaDetail', component: () => import('../views/dashboard/siswa/DetailView.vue') },
+            { path: 'users', name: 'UsersIndex', component: () => import('../views/dashboard/users/IndexView.vue') },
+            { path: 'users/create', name: 'UsersCreate', component: () => import('../views/dashboard/users/FormView.vue') },
+            { path: 'users/edit/:id', name: 'UsersEdit', component: () => import('../views/dashboard/users/FormView.vue') },
         ]
     }
 ];

@@ -7,6 +7,15 @@
             </div>
             <nav class="flex-1 p-4 space-y-2">
                 <p class="text-slate-400 text-xs uppercase font-semibold mb-4">Menu Utama</p>
+                <router-link to="/dashboard" class="flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all group"
+                    :class="$route.path === '/dashboard' ? 'bg-emerald-700 text-white shadow-lg shadow-emerald-900/50' : 'text-emerald-100/70 hover:bg-emerald-700/50 hover:text-emerald-50'">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    <span>Dashboard</span>
+                </router-link>
                 <router-link to="/dashboard/users"
                     class="flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all group"
                     :class="$route.path.includes('users') ? 'bg-emerald-700 text-white shadow-lg shadow-emerald-900/50' : 'text-emerald-100/70 hover:bg-emerald-700/50 hover:text-emerald-50'">

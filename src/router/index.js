@@ -35,7 +35,10 @@ const routes = [
             { path: 'guru', name: 'GuruIndex', component: () => import('../views/dashboard/guru/IndexView.vue') },
             { path: 'guru/create', name: 'GuruCreate', component: () => import('../views/dashboard/guru/FormView.vue') },
             { path: 'guru/edit/:id', name: 'GuruEdit', component: () => import('../views/dashboard/guru/FormView.vue') },
-            { path: 'guru/:id', name: 'GuruDetail', component: () => import('../views/dashboard/guru/DetailView.vue') }
+            { path: 'guru/:id', name: 'GuruDetail', component: () => import('../views/dashboard/guru/DetailView.vue') },
+            { path: 'jadwal', name: 'JadwalIndex', component: () => import('../views/dashboard/jadwal/IndexView.vue') },
+            { path: 'jadwal/create', name: 'JadwalCreate', component: () => import('../views/dashboard/jadwal/FormView.vue') },
+            { path: 'jadwal/edit/:id', name: 'JadwalEdit', component: () => import('../views/dashboard/jadwal/FormView.vue') }
         ]
     }
 ];

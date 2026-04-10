@@ -1,0 +1,32 @@
+<template>
+    <div class="min-h-screen flex bg-gray-100">
+        <aside class="w-64 bg-slate-800 text-white flex flex-col transition-all duration-300">
+            <div
+                class="h-16 flex items-center justify-center border-b border-slate-700 text-xl font-bold tracking-wider">
+                SCHOOL API
+            </div>
+            <nav class="flex-1 p-4 space-y-2">
+                <p class="text-slate-400 text-xs uppercase font-semibold mb-4">Menu Utama</p>
+                <div class="text-sm text-slate-500 italic p-2 bg-slate-700/30 rounded">
+                    Navigasi akan ditambahkan pada tahap selanjutnya...
+                </div>
+            </nav>
+        </aside>
+
+        <div class="flex-1 flex flex-col">
+            <header class="h-16 bg-white shadow-sm flex items-center justify-between px-6 z-10">
+                <div class="text-gray-500">
+                </div>
+                <div>
+                    <button class="text-sm font-medium text-red-600 hover:text-red-800 transition-colors">
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            <main class="flex-1 p-6 overflow-y-auto">
+                <router-view />
+            </main>
+        </div>
+    </div>
+</template>

@@ -28,7 +28,10 @@ const routes = [
             { path: '', name: 'Dashboard', component: () => import('../views/dashboard/IndexView.vue') },
             { path: 'kelas', name: 'KelasIndex', component: () => import('../views/dashboard/kelas/IndexView.vue') },
             { path: 'kelas/create', name: 'KelasCreate', component: () => import('../views/dashboard/kelas/FormView.vue') },
-            { path: 'kelas/edit/:id', name: 'KelasEdit', component: () => import('../views/dashboard/kelas/FormView.vue') }
+            { path: 'kelas/edit/:id', name: 'KelasEdit', component: () => import('../views/dashboard/kelas/FormView.vue') },
+            { path: 'mapel', name: 'MapelIndex', component: () => import('../views/dashboard/mapel/IndexView.vue') },
+            { path: 'mapel/create', name: 'MapelCreate', component: () => import('../views/dashboard/mapel/FormView.vue') },
+            { path: 'mapel/edit/:id', name: 'MapelEdit', component: () => import('../views/dashboard/mapel/FormView.vue') }
         ]
     }
 ];
